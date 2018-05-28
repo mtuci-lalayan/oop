@@ -1,13 +1,8 @@
-#include "func.h"
-#include <math.h>
-float func(void)
-float func(void)
+#include <stdlib.h> //Заголовочный файл стандартной библиотеки
+#include <math.h> // Заголовочный файл мат. функций
+#include "func.h" // Пользовательский заголовочный файл
+
+void func()
 {
-	f = pow(cos(x), 4) + pow(sin(y), 2) + 0, 25 * pow(sin(2 * x), 2) - 1;
+	result = cos(x) + cos(2 * x) + cos(6 * x) + cos(7 * x);
 }
-
-Исходный код файла func.h
-#pragma once
-
-float func();
-float x, y, f;

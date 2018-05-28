@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-float func(float x, float y)
+#include <stdlib.h> //Заголовочный файл стандартной библиотеки
+#include <math.h> // Заголовочный файл мат. функций
+
+float func(int x)
 {
-	float f;
-	f = pow(cos(x), 4) + pow(sin(y), 2) + 0, 25 * pow(sin(2 * x), 2) - 1;
-	return(f);
+	float result;
+	result = cos(x) + cos(2 * x) + cos(6 * x) + cos(7 * x);
+	return result;
 }

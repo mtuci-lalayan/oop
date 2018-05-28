@@ -1,30 +1,35 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-float func(float x, float y);
-int main(void)
+#include <stdlib.h> //Заголовочный файл стандартной библиотеки
+#include <stdio.h> // Заголовочный файл функций ввода-вывода
+#include <math.h> // Заголовочный файл мат. функций
+
+float func(int x);
+
+int main()
 {
-	system("chcp 1251"); /*Переход в консоли на русский язык*/
-	system("cls"); /*Очистка консоли*/
-	float x, y, f;
-	x = 5;
-	y = 8.2537;
-	f = func(x, y);
-	printf("При X=5 и Y = 8.2537 результат = %f\n", f);
-	printf("Введите Х=");
-	scanf_s("%f", &x);
-	printf("Введите Y=");
-	scanf_s("%f", &y);
-	f = func(x, y);
-	printf("Результат = %f", f);
-	getchar();
-	getchar();
-	return(0);
+	system("chcp 1251"); // Перевод консоли на русский язык
+	system("cls"); // Очистка консоли
+
+	const int x = 19;
+	int x1;
+	float result;
+
+	// Выполнение задания с использованием констант
+	result = func(x);
+	printf("При заданном значении x = 19 значение выражения равняется %.4f\n\n", result);
+
+	//Выполнение задания с использованием заданных пользователем значений
+	printf("Введите x: ");
+	scanf_s("%d", &x1);
+	result = func(x1);
+	printf("При введенном значении x = %d значение выражения равняется %.4f\n", x1, result);
+
+	system("pause"); // Ожидание нажатия клавиши для предотвращения завершения
+	return 0;
 }
 
-float func(float x, float y)
+float func(int x)
 {
-	float f;
-	f = pow(cos(x), 4) + pow(sin(y), 2) + 0, 25 * pow(sin(2 * x), 2) - 1;
-	return(f);
+	float result;
+	result = cos(x) + cos(2 * x) + cos(6 * x) + cos(7 * x);
+	return result;
 }

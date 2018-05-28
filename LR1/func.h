@@ -1,4 +1,3 @@
 #pragma once
-
-float func();
-float x, y, f;
+int x; float result; // Объявление глобальных переменных
+void func(void); // Прототип функции без параметров
